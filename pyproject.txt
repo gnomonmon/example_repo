@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.backends.legacy:build"
+
+[project]
+name = "mypackage"
+version = "0.1.0"
+description = "Example repo for testing GitHub clone and sync"
+requires-python = ">=3.9"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["mypackage*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
